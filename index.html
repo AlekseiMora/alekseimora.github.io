@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Mi portafolio online</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link type="image/x-icon" href="static/images/favicon.ico" rel="icon" />
+		<link rel="stylesheet" type="text/css" href="static/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	</head>
+	<body>
+		<header id="yo" class="Header">
+			<nav class="MainMenu">
+				<ul class="MainMenu-list">
+					<li class="MainMenu-item">
+						<a class="MainMenu-link" href="#yo">Yo</a>
+					</li>
+					<li class="MainMenu-item">
+						<a class="MainMenu-link" href="#perfil">Perfil</a>
+					</li>
+					<li class="MainMenu-item">
+						<a class="MainMenu-link" href="#trabajo">Trabajo</a>
+					</li>
+				</ul>
+			</nav>
+			<figure class="Header-imageContainer">
+				<img src="https://pbs.twimg.com/profile_images/544558196254191616/qYP1Q59-.jpeg" alt="Imagen personal" class="Header-image"/>
+				<figcaption class="Header-imageDescription">
+					<a href="http://twitter.com/Aleks_Mora" target="_black" class="Header-link">@Aleks_Mora</a>
+				</figcaption>
+				<p class="Header-name">Writer || Entrepreneur || Creative Director || Web Developer</p>
+			</figure>
+		</header>
+		<section id="perfil" class="Profile">
+			<h2 class="Profile-title u-title">Perfil</h2>
+			<p class="Profile-description">
+				Puedes contactarme por redes sociales.
+			</p>
+			<div class="Profile-container">
+				<a class="Profile-link icon-twitter" href="http://twitter.com/Aleks_Mora" target="_blank"> Twitter</a>
+				<a class="Profile-link icon-newspaper" href="http://medium.com/@Aleks_Mora" target="_blank"> Medium</a>
+				<a class="Profile-link icon-facebook" href="https://www.facebook.com/AlekseiMora" target="_blank"> Facebook</a>
+				<a class="Profile-link icon-github" href="http://github.com/AlekseiMora" target="_blank"> Github</a>
+			</div>
+		</section>
+		<section id="trabajo" class="Work">
+			<h2 class="Work-title u-title">Mi trabajo</h2>
+			
+			<div id="Textos">
+				<h3>Siempre escribo...</h3>
+				<article class="Work-item Textos-item">
+					<figure class="Work-imageContainer">
+						<a href="https://medium.com/atados-la-amistad-definitiva/atados-9622c85691e8" target="_black"><img class="Work-Image" src="static/images/img_atados.jpg" alt="pippimuckel"></a>
+						<figcaption class="Work-description">Atados<p class="Work-info">¿Existe la amistad verdadera entre hombres y mujeres?</p></figcaption>
+						</figure>
+				</article>
+				<article class="Work-item Textos-item">
+					<figure class="Work-imageContainer">
+						<a href="https://medium.com/mi-diario-nocturno/mi-diario-nocturno-e6fe50acb28c" target="_blank"><img class="Work-Image" src="static/images/img_diario.jpg" alt="deviantart"></a>
+						<figcaption class="Work-description">Mi diario nocturno<p class="Work-info">Una historia de vampiros que no brillan</p></figcaption>
+						</figure>
+				</article>
+				<article class="Work-item Textos-item">
+					<figure class="Work-imageContainer">
+						<a href="https://medium.com/era-natural/era-natural-dcfc46f8d018" target="_white"><img class="Work-Image" src="static/images/img_era.jpg" alt="Es la descripción de mi imagen"></a>
+						<figcaption class="Work-description">Era Natural [Año Cero]<p class="Work-info">¿Qué harías si el planeta se rebela contra los humanos?</p></figcaption>
+						</figure>
+				</article>
+			</div>
+
+			<div id="Web">
+				<h3>...y aprendo sobre la web...</h3>
+				<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<a href="http://alekseimora.github.io/LosEnder" target="_red"><img class="Work-Image" src="static/images/img_juego.jpg" alt="Juego de los Ender"></a>
+					<figcaption class="Work-description">El Juego de los Ender</figcaption>
+				</figure>
+				<p class="Work-info">Este es un videojuego que hice con las clases de <a id="Platzi" href="https://twitter.com/platzi" target="_Platzi">@Platzi</a></p>
+			</article>		
+			</div>
+
+			<div id="Vansiony">
+				<h3>para cambiar el mundo de los juegos de rol.</h3>
+			<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<img class="Work-Image" src="https://excellentleading.files.wordpress.com/2015/04/not-ready1.jpg" alt="Es la descripción de mi imagen">
+					<figcaption class="Work-description">Vansiony</figcaption>
+				</figure>
+				<p class="Work-info">En Vansiony trabajamos por cambiar el mundo del entretenimiento al evolucionar el concepto de los Juegos de Rol apoyándonos en la literatura y tecnología web.</p>
+			</article>
+			<article class="Work-item">
+				<figure class="Work-imageContainer">
+					<img class="Work-Image" src="https://excellentleading.files.wordpress.com/2015/04/not-ready1.jpg" alt="Es la descripción de mi imagen">
+					<figcaption class="Work-description">Era Natural. <br>Buscando el Equilibrio</figcaption>
+					</figure>
+			</article>
+			</div>
+		</section>
+		<footer id="contacto" class="Footer">
+			<div class="Footer-left">
+				<!<h3 class="Footer-title"><!Contacto</h3>
+				<p class="Footer-description"> aleksei.mora@gmail.com</p>
+			</div>
+			<form class="Footer-form">
+				<input type="text" placeholder="Nombre" class="Footer-formInput"/>
+				<input type="email" placeholder="Email" class="Footer-formInput"/>
+				<textarea placeholder="Motivo" class="Footer-textarea"></textarea>
+				<button type="submit" class="Footer-button">Contactarme</button>
+			</form>
+		</footer>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-63294550-2', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>
