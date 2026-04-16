@@ -1,140 +1,442 @@
 <!DOCTYPE html>
-<html lang="es">
-	<head>
-		<title>Mi portafolio online</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-		<link type="image/x-icon" href="static/images/favicon.ico" rel="icon" />
-		<link rel="stylesheet" type="text/css" href="static/css/normalize.css">
-		<link rel="stylesheet" type="text/css" href="static/css/style.css">
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Aleksei Mora | The Editorial Janus</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;0,6..72,800;1,6..72,400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-container": "#a7b6cc",
+            "tertiary-container": "#ffa668",
+            "surface-container-low": "#131b2e",
+            "on-primary-fixed": "#002114",
+            "primary-fixed": "#68fcbf",
+            "surface-container-lowest": "#060e20",
+            "secondary-container": "#39485a",
+            "on-primary": "#003825",
+            "error-container": "#93000a",
+            "secondary": "#b9c8de",
+            "surface-bright": "#31394d",
+            "tertiary-fixed": "#ffdcc7",
+            "on-tertiary-fixed": "#311300",
+            "on-error-container": "#ffdad6",
+            "surface-tint": "#45dfa4",
+            "on-primary-fixed-variant": "#005137",
+            "on-secondary-fixed": "#0d1c2d",
+            "surface-variant": "#2d3449",
+            "on-secondary-fixed-variant": "#39485a",
+            "on-tertiary-fixed-variant": "#723600",
+            "tertiary": "#ffccad",
+            "surface-container-highest": "#2d3449",
+            "on-surface-variant": "#bbcac0",
+            "surface-container": "#171f33",
+            "outline": "#85948b",
+            "on-primary-container": "#00563b",
+            "primary-container": "#34d399",
+            "surface-container-high": "#222a3d",
+            "error": "#ffb4ab",
+            "inverse-primary": "#006c4b",
+            "primary-fixed-dim": "#45dfa4",
+            "surface": "#0b1326",
+            "outline-variant": "#3c4a42",
+            "tertiary-fixed-dim": "#ffb787",
+            "on-background": "#dae2fd",
+            "on-tertiary-container": "#783901",
+            "on-error": "#690005",
+            "on-secondary": "#233143",
+            "surface-dim": "#0b1326",
+            "inverse-on-surface": "#283044",
+            "on-surface": "#dae2fd",
+            "inverse-surface": "#dae2fd",
+            "secondary-fixed": "#d4e4fa",
+            "background": "#0b1326",
+            "on-tertiary": "#502400",
+            "secondary-fixed-dim": "#b9c8de",
+            "primary": "#5af0b3"
+          },
+          borderRadius: {
+            "DEFAULT": "0rem",
+            "lg": "0rem",
+            "xl": "0rem",
+            "full": "9999px"
+          },
+          fontFamily: {
+            "headline": ["Newsreader"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          animation: {
+            'infinite-scroll': 'infinite-scroll 40s linear infinite',
+          },
+          keyframes: {
+            'infinite-scroll': {
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(-50%)' },
+            }
+          }
+        },
+      },
+    }
+  </script>
+</head>
 
-		  ga('create', 'UA-63294550-2', 'auto');
-		  ga('send', 'pageview');
+<body class="bg-surface font-body text-on-surface selection:bg-primary selection:text-on-primary flex flex-col min-h-screen overflow-x-hidden">
 
-		</script>
-	</head>
-	<body>
-		<!-- Google Tag Manager -->
-		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KFVFFT"
-			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-KFVFFT');
-		</script>
-		<!-- End Google Tag Manager -->
-		<header id="yo" class="Header">
-			<nav class="MainMenu">
-				<ul class="MainMenu-list">
-					<li class="MainMenu-item">
-						<a class="MainMenu-link" href="#yo">Yo</a>
-					</li>
-					<li class="MainMenu-item">
-						<a class="MainMenu-link" href="#perfil">Perfil</a>
-					</li>
-					<li class="MainMenu-item">
-						<a class="MainMenu-link" href="#trabajo">Trabajo</a>
-					</li>
-				</ul>
-			</nav>
-			<figure class="Header-imageContainer">
-				<img src="https://pbs.twimg.com/profile_images/850009185517318144/m-VrRiG6_400x400.jpg" alt="Imagen personal" class="Header-image"/>
-				<figcaption class="Header-imageDescription">
-					<a href="http://twitter.com/AlekseiMora" target="_black" class="Header-link">@AlekseiMora</a>
-				</figcaption>
-				<p class="Header-name">Writer || Entrepreneur || Creative Director || Web Developer</p>
-			</figure>
-		</header>
-		<section id="perfil" class="Profile">
-			<h2 class="Profile-title u-title">Perfil</h2>
-			<p class="Profile-description">
-				Puedes contactarme por redes sociales.
-			</p>
-			<div class="Profile-container">
-				<a class="Profile-link icon-twitter" href="http://twitter.com/AlekseiMora" target="_blank"> Twitter</a>
-				<a class="Profile-link icon-newspaper" href="http://medium.com/@Aleks_Mora" target="_blank"> Medium</a>
-				<a class="Profile-link icon-facebook" href="https://www.facebook.com/AlekseiMora" target="_blank"> Facebook</a>
-				<a class="Profile-link icon-github" href="http://github.com/AlekseiMora" target="_blank"> Github</a>
-			</div>
-		</section>
-		<section id="trabajo" class="Work">
-			<h2 class="Work-title u-title">Mi trabajo</h2>
-			
-			<div id="Textos">
-				<h3>Siempre escribo...</h3>
-				<article class="Work-item Textos-item">
-					<figure class="Work-imageContainer">
-						<a href="https://medium.com/atados-la-amistad-definitiva/atados-9622c85691e8" target="_black"><img class="Work-Image" src="static/images/img_atados.jpg" alt="pippimuckel"></a>
-						<figcaption class="Work-description">Atados<p class="Work-info">¿Existe la amistad verdadera entre hombres y mujeres?</p></figcaption>
-						</figure>
-				</article>
-				<article class="Work-item Textos-item">
-					<figure class="Work-imageContainer">
-						<a href="https://medium.com/mi-diario-nocturno/mi-diario-nocturno-e6fe50acb28c" target="_blank"><img class="Work-Image" src="static/images/img_diario.jpg" alt="deviantart"></a>
-						<figcaption class="Work-description">Mi diario nocturno<p class="Work-info">Una historia de vampiros que no brillan</p></figcaption>
-						</figure>
-				</article>
-				<article class="Work-item Textos-item">
-					<figure class="Work-imageContainer">
-						<a href="https://medium.com/era-natural/era-natural-dcfc46f8d018" target="_white"><img class="Work-Image" src="static/images/img_era.jpg" alt="Es la descripción de mi imagen"></a>
-						<figcaption class="Work-description">Era Natural [Año Cero]<p class="Work-info">¿Qué harías si el planeta se rebela contra los humanos?</p></figcaption>
-						</figure>
-				</article>
-			</div>
+  <!-- ═══════════════════════════════════════════
+       TOP APP BAR / NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-[#0b1326]/80 backdrop-blur-xl border-b border-[#3c4a42]/15">
+    <div class="text-3xl md:text-5xl font-extrabold tracking-tighter text-[#dae2fd] Newsreader italic">Aleksei Mora</div>
 
-			<div id="Web">
-				<h3>...y aprendo sobre la web...</h3>
-				<article class="Work-item">
-				<figure class="Work-imageContainer">
-					<a href="http://alekseimora.github.io/LosEnder" target="_red"><img class="Work-Image" src="static/images/img_juego.jpg" alt="Juego de los Ender"></a>
-					<figcaption class="Work-description">El Juego de los Ender</figcaption>
-				</figure>
-				<p class="Work-info">Este es un videojuego que hice con las clases de <a id="Platzi" href="https://twitter.com/platzi" target="_Platzi">@Platzi</a></p>
-				</article>		
-				<article class="Work-item">
-				<figure class="Work-imageContainer">
-					<a href="http://alekseimora.github.io/mimor/" target="_red"><img class="Work-Image" src="static/images/img_mimor.jpg" alt="Carta a mi amor"></a>
-					<figcaption class="Work-description">Postal para cuando estás lejos</figcaption>
-				</figure>
-				<p class="Work-info">Esta es una postal que hice de rápido cuando estaba lejos de mi novia.</p>
-				</article>		
-			</div>
+    <!-- Desktop Nav Links -->
+    <div class="hidden md:flex gap-8">
+      <a class="text-[#bbcac0] Inter text-[0.6875rem] tracking-widest uppercase hover:text-[#5af0b3] transition-colors duration-300" href="#systems-architect">Systems Architect</a>
+      <a class="text-[#bbcac0] Inter text-[0.6875rem] tracking-widest uppercase hover:text-[#5af0b3] transition-colors duration-300" href="#narrative-archive">The Narrative Archive</a>
+      <a class="text-[#bbcac0] Inter text-[0.6875rem] tracking-widest uppercase hover:text-[#5af0b3] transition-colors duration-300" href="#core-values">Core Values</a>
+      <a class="text-[#bbcac0] Inter text-[0.6875rem] tracking-widest uppercase hover:text-[#5af0b3] transition-colors duration-300" href="#contact">Contact</a>
+    </div>
 
-			<div id="Vansiony">
-				<h3>para cambiar el mundo de los juegos de rol.</h3>
-			<article class="Work-item">
-				<figure class="Work-imageContainer">
-					<img class="Work-Image" src="https://excellentleading.files.wordpress.com/2015/04/not-ready1.jpg" alt="Es la descripción de mi imagen">
-					<figcaption class="Work-description">Vansiony</figcaption>
-				</figure>
-				<p class="Work-info">En Vansiony trabajamos por cambiar el mundo del entretenimiento al evolucionar el concepto de los Juegos de Rol apoyándonos en la literatura y tecnología web.</p>
-			</article>
-			<article class="Work-item">
-				<figure class="Work-imageContainer">
-					<img class="Work-Image" src="https://excellentleading.files.wordpress.com/2015/04/not-ready1.jpg" alt="Es la descripción de mi imagen">
-					<figcaption class="Work-description">Era Natural. <br>Buscando el Equilibrio</figcaption>
-					</figure>
-			</article>
-			</div>
-		</section>
-		<footer id="contacto" class="Footer">
-			<div class="Footer-left">
-				<!<h3 class="Footer-title"><!Contacto</h3>
-				<p class="Footer-description"> Escríbeme a: aleksei.mora@gmail.com </p>
-			</div>
-			<form class="Footer-form">
-				<input type="text" placeholder="Nombre" class="Footer-formInput"/>
-				<input type="email" placeholder="Email" class="Footer-formInput"/>
-				<textarea placeholder="Motivo" class="Footer-textarea"></textarea>
-				<button type="submit" class="Footer-button">Contactarme</button>
-			</form>
-		</footer>
-		
-	</body>
+    <!-- Mobile Hamburger -->
+    <button class="md:hidden" id="mobile-menu-btn" aria-label="Open menu">
+      <span class="material-symbols-outlined text-primary">menu</span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-[#0b1326]/95 backdrop-blur-xl flex flex-col justify-center items-center gap-10">
+    <button id="mobile-menu-close" aria-label="Close menu" class="absolute top-6 right-8">
+      <span class="material-symbols-outlined text-primary text-3xl">close</span>
+    </button>
+    <a class="text-[#dae2fd] text-2xl font-bold tracking-widest uppercase hover:text-[#5af0b3] transition-colors" href="#systems-architect">Systems Architect</a>
+    <a class="text-[#dae2fd] text-2xl font-bold tracking-widest uppercase hover:text-[#5af0b3] transition-colors" href="#narrative-archive">The Narrative Archive</a>
+    <a class="text-[#dae2fd] text-2xl font-bold tracking-widest uppercase hover:text-[#5af0b3] transition-colors" href="#core-values">Core Values</a>
+    <a class="text-[#dae2fd] text-2xl font-bold tracking-widest uppercase hover:text-[#5af0b3] transition-colors" href="#contact">Contact</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════
+       CORE VALUES — INFINITE SCROLL CAROUSEL
+  ═══════════════════════════════════════════ -->
+  <section class="pt-24 pb-0 bg-surface-container-lowest border-b border-primary/10 overflow-hidden" id="core-values">
+    <div class="relative flex items-center bg-[#0b1326] py-10 border-y border-outline-variant/10">
+      <div class="carousel-track animate-infinite-scroll whitespace-nowrap flex items-center">
+        <!-- Set 1 -->
+        <div class="flex items-center gap-12 px-6">
+          <span class="text-xs font-bold tracking-[0.4em] uppercase text-outline-variant">My Core Values:</span>
+          <span class="text-2xl md:text-3xl font-black tracking-tighter text-[#dae2fd] hover:text-primary transition-colors cursor-default uppercase">Strategic</span>
+          <span class="text-primary opacity-30 text-2xl">•</span>
+          <span class="font-headline italic text-2xl md:text-3xl text-on-surface hover:text-primary transition-colors cursor-default">Innovation</span>
+          <span class="text-primary opacity-30 text-2xl">•</span>
+          <span class="text-2xl md:text-3xl font-black tracking-tighter text-[#dae2fd] hover:text-primary transition-colors cursor-default uppercase">Creativity</span>
+          <span class="text-primary opacity-30 text-2xl">•</span>
+          <span class="font-headline italic text-2xl md:text-3xl text-on-surface hover:text-primary transition-colors cursor-default">Kindness</span>
+          <span class="text-primary opacity-30 text-2xl">•</span>
+          <span class="text-2xl md:text-3xl font-black tracking-tighter text-[#dae2fd] hover:text-primary transition-colors cursor-default uppercase">Courage</span>
+        </div>
+        <!-- Set 2 — duplicate for seamless loop -->
+        <div class="flex items-center gap-12 px-6">
+          <span class="text-xs font-bold tracking-[0.4em] uppercase text-outline-variant">My Core Values:</span>
+          <span class="text-2xl md:text-3xl font-black tracking-tighter text-[#dae2fd] hover:text-primary transition-colors cursor-default uppercase">Strategic</span>
+          <span class="text-primary opacity-30 text-2xl">•</span>
+          <span class="font-headline italic text-2xl md:text-3xl text-on-surface hover:text-primary transition-colors cursor-default">Innovation</span>
+          <span class="text-primary opacity-30 text-2xl">•</span>
+          <span class="text-2xl md:text-3xl font-black tracking-tighter text-[#dae2fd] hover:text-primary transition-colors cursor-default uppercase">Creativity</span>
+          <span class="text-primary opacity-30 text-2xl">•</span>
+          <span class="font-headline italic text-2xl md:text-3xl text-on-surface hover:text-primary transition-colors cursor-default">Kindness</span>
+          <span class="text-primary opacity-30 text-2xl">•</span>
+          <span class="text-2xl md:text-3xl font-black tracking-tighter text-[#dae2fd] hover:text-primary transition-colors cursor-default uppercase">Courage</span>
+        </div>
+      </div>
+      <!-- Fade edges -->
+      <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-surface-container-lowest to-transparent z-10"></div>
+      <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-surface-container-lowest to-transparent z-10"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       MAIN — TWO-COLUMN LAYOUT
+  ═══════════════════════════════════════════ -->
+  <main class="flex flex-col md:flex-row md:h-[calc(100vh-220px)] md:overflow-hidden relative">
+
+    <!-- ─────────────────────────────────────────
+         LEFT: SYSTEMS ARCHITECT
+    ───────────────────────────────────────── -->
+    <section
+      class="w-full md:w-1/2 bg-[#dae2fd] text-surface-container-lowest p-8 md:p-16 lg:p-24 md:h-full md:overflow-y-auto border-r border-outline-variant/10 independent-scroll"
+      id="systems-architect">
+      <div class="max-w-xl mx-auto space-y-16">
+
+        <!-- Profile Header -->
+        <div class="flex flex-col items-center gap-6 text-center">
+          <div class="relative flex-shrink-0 mb-4">
+            <div class="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-2 border-dashed border-surface-container p-2 md:p-3">
+              <!--
+                PROFILE PICTURE
+                Place your image at: static/images/profile.jpg
+                Recommended: square crop, min 512×512px
+              -->
+              <img
+                alt="Aleksei Mora"
+                class="w-full h-full rounded-full object-cover"
+                src="static/images/profile.jpg"
+              />
+            </div>
+          </div>
+          <div class="text-center">
+            <span class="text-[0.6875rem] font-bold tracking-widest uppercase text-surface-container-high block mb-2">Strategist</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-surface-dim leading-tight">Systems Architect.</h1>
+          </div>
+        </div>
+
+        <!-- Philosophy -->
+        <div class="space-y-6">
+          <h2 class="text-xs font-bold tracking-widest uppercase text-surface-container-high">The Philosophy</h2>
+          <p class="text-xl leading-relaxed font-light text-surface-dim">
+            Navigating complex ecosystems requires more than logic—it demands the
+            <span class="bg-primary/20 font-bold px-1 text-on-primary-container">Courage to pivot</span>
+            when data conflicts with dogma. My work bridges technical rigor with human-centric empathy.
+          </p>
+        </div>
+
+        <!-- Impact Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-6 bg-white/40 border border-surface-container/5 hover:bg-white/60 transition-all">
+            <span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings:'FILL' 0;">trending_up</span>
+            <h3 class="text-sm font-bold uppercase tracking-wider mb-2">Scaling</h3>
+            <p class="text-2xl font-bold text-surface-dim">4.2x</p>
+            <p class="text-xs text-on-surface-variant mt-1">Growth in operational throughput across global verticals.</p>
+          </div>
+          <div class="p-6 bg-white/40 border border-surface-container/5 hover:bg-white/60 transition-all">
+            <span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings:'FILL' 0;">account_balance</span>
+            <h3 class="text-sm font-bold uppercase tracking-wider mb-2">Governance</h3>
+            <p class="text-2xl font-bold text-surface-dim">100%</p>
+            <p class="text-xs text-on-surface-variant mt-1">Audit compliance achieved within first quarter of integration.</p>
+          </div>
+          <div class="p-6 bg-white/40 border border-surface-container/5 hover:bg-white/60 transition-all">
+            <span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings:'FILL' 0;">diversity_3</span>
+            <h3 class="text-sm font-bold uppercase tracking-wider mb-2">Engagement</h3>
+            <p class="text-2xl font-bold text-surface-dim">+64%</p>
+            <p class="text-xs text-on-surface-variant mt-1">Increase in cross-functional stakeholder retention.</p>
+          </div>
+          <div class="p-6 bg-white/40 border border-surface-container/5 hover:bg-white/60 transition-all">
+            <span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings:'FILL' 0;">psychology</span>
+            <h3 class="text-sm font-bold uppercase tracking-wider mb-2">Talent Incubation</h3>
+            <p class="text-2xl font-bold text-surface-dim">12</p>
+            <p class="text-xs text-on-surface-variant mt-1">Emerging leaders successfully placed in C-suite advisory roles.</p>
+          </div>
+        </div>
+
+        <!-- Strategic Kindness -->
+        <div class="py-12 border-t border-surface-container/10">
+          <h2 class="font-headline italic text-3xl mb-4 text-surface-dim">Strategic Kindness</h2>
+          <p class="text-lg font-light text-on-secondary-fixed-variant leading-relaxed">
+            Kindness is not a soft skill; it is a tactical advantage. By optimizing for empathy, we reduce friction,
+            accelerate trust, and build systems that are resilient to the chaos of human interaction.
+          </p>
+        </div>
+
+        <!-- CTAs + Contact anchor -->
+        <div class="flex flex-wrap gap-4 pt-8 pb-12" id="contact">
+          <a class="bg-surface-dim text-on-surface px-8 py-3 font-bold hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-2" href="mailto:aleksei@example.com">
+            Contact via Email <span class="material-symbols-outlined text-sm">mail</span>
+          </a>
+          <a class="px-6 py-3 border border-surface-dim/20 font-bold hover:bg-surface-dim hover:text-white transition-all" href="#">LinkedIn</a>
+          <a class="px-6 py-3 border border-surface-dim/20 font-bold hover:bg-surface-dim hover:text-white transition-all" href="#">Medium</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ─────────────────────────────────────────
+         RIGHT: THE NARRATIVE ARCHIVE
+    ───────────────────────────────────────── -->
+    <section
+      class="w-full md:w-1/2 bg-surface text-on-surface p-8 md:p-16 lg:p-24 md:h-full md:overflow-y-auto relative independent-scroll"
+      id="narrative-archive">
+      <div class="max-w-xl mx-auto space-y-16">
+
+        <!-- Brand Title -->
+        <div class="space-y-2">
+          <span class="text-[0.6875rem] font-bold tracking-widest uppercase text-primary block">Author &amp; Poet</span>
+          <h1 class="font-headline text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">The Narrative Archive.</h1>
+        </div>
+
+        <!-- Flagship — 3D Flip Book -->
+        <div class="space-y-8">
+          <div class="flex flex-col lg:flex-row gap-12 items-center">
+
+            <!-- Book Widget -->
+            <div class="book-container">
+              <div class="book" id="book" role="button" tabindex="0" aria-label="Toggle book cover" title="Click to flip">
+                <!-- FRONT -->
+                <div class="book-page book-front bg-[#0b1326] shadow-2xl overflow-hidden">
+                  <!--
+                    BOOK FRONT COVER
+                    Place your image at: static/images/book-cover.jpg
+                    Recommended: 560×800px (2:2.86 ratio to fill the card)
+                  -->
+                  <img
+                    alt="Era Natural Book Cover"
+                    class="w-full h-full object-cover grayscale contrast-125"
+                    src="static/images/book-cover.jpg"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+                  <div class="absolute bottom-6 left-6 right-6">
+                    <h3 class="font-headline text-2xl text-primary leading-tight">Era Natural. Semillas</h3>
+                    <p class="text-[0.6875rem] uppercase tracking-widest opacity-80 mt-2">Flagship Anthology</p>
+                  </div>
+                </div>
+                <!-- BACK -->
+                <div class="book-page book-back bg-surface-container-high p-8 flex flex-col justify-center items-center text-center">
+                  <!--
+                    BOOK BACK COVER
+                    Place your image at: static/images/book-back.jpg
+                    It will appear as a background behind the quote overlay.
+                    Remove the <img> tag below if you prefer a plain dark card.
+                  -->
+                  <img
+                    alt="Era Natural Book Back Cover"
+                    class="book-back-img"
+                    src="static/images/book-back.jpg"
+                  />
+                  <div class="book-back-overlay">
+                    <p class="font-headline italic text-lg leading-relaxed text-on-surface">
+                      "Every seed is a promise whispered to the earth, a biological memory of the sun."
+                    </p>
+                    <div class="w-12 h-[1px] bg-primary my-6 mx-auto"></div>
+                    <p class="text-xs uppercase tracking-widest text-primary-fixed-dim">Review: The Literary Times</p>
+                  </div>
+                </div>
+              </div>
+              <p class="text-center text-xs text-outline mt-4 tracking-widest uppercase">Click / tap to flip</p>
+            </div>
+
+            <!-- Marketing Stats -->
+            <div class="flex-1 space-y-6">
+              <h2 class="font-headline text-3xl">Marketing Success</h2>
+              <div class="space-y-4">
+                <div class="relative pl-6 border-l-2 border-primary/30">
+                  <p class="text-2xl font-bold text-primary">100%</p>
+                  <p class="text-sm opacity-70">Crowdfunding target reached in record time.</p>
+                </div>
+                <div class="relative pl-6 border-l-2 border-primary/30">
+                  <p class="text-2xl font-bold text-primary">PR Wave</p>
+                  <p class="text-sm opacity-70">Featured in 12+ major literary journals.</p>
+                </div>
+                <div class="relative pl-6 border-l-2 border-primary/30">
+                  <p class="text-2xl font-bold text-primary">15k+</p>
+                  <p class="text-sm opacity-70">Global community members across ecosystems.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Synthesis -->
+        <div class="space-y-6">
+          <div class="p-8 border border-outline-variant/20 bg-surface-container-low/30">
+            <p class="font-headline italic text-2xl md:text-3xl leading-relaxed text-on-surface/90">
+              "Era Natural: Semillas. A 139,000-word sci-fi exploration of technology and human nature. Managed from first draft to global distribution."
+            </p>
+          </div>
+          <a class="inline-flex items-center justify-center px-10 py-4 bg-primary text-on-primary font-bold tracking-widest uppercase hover:bg-primary/90 transition-all text-sm" href="#">
+            Buy on Amazon
+          </a>
+        </div>
+
+        <!-- Active Development -->
+        <div class="pt-8 border-t border-outline-variant/10">
+          <h2 class="text-xs font-bold tracking-[0.3em] uppercase text-primary mb-8">Active Development</h2>
+          <ul class="space-y-6">
+            <li class="flex items-center justify-between group">
+              <span class="font-headline text-xl text-on-surface group-hover:text-primary transition-colors">Era Natural II</span>
+              <span class="text-[0.6rem] uppercase tracking-widest px-3 py-1 border border-outline-variant/30 text-on-surface-variant">Drafting</span>
+            </li>
+            <li class="flex items-center justify-between group">
+              <span class="font-headline text-xl text-on-surface group-hover:text-primary transition-colors">Era Natural: Año Cero</span>
+              <span class="text-[0.6rem] uppercase tracking-widest px-3 py-1 border border-outline-variant/30 text-on-surface-variant">Conceptual</span>
+            </li>
+            <li class="flex items-center justify-between group">
+              <span class="font-headline text-xl text-on-surface group-hover:text-primary transition-colors">Boardgame Design &amp; Community</span>
+              <span class="text-[0.6rem] uppercase tracking-widest px-3 py-1 border border-outline-variant/30 text-on-surface-variant">Experimental Marketing</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="pb-12">
+          <div class="flex flex-wrap gap-x-12 gap-y-6">
+            <a class="font-headline italic text-2xl hover:text-primary transition-all" href="#">TikTok</a>
+            <a class="font-headline italic text-2xl hover:text-primary transition-all" href="#">Instagram</a>
+            <a class="font-headline italic text-2xl hover:text-primary transition-all" href="#">Facebook</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════
+       VALUES IN ACTION
+  ═══════════════════════════════════════════ -->
+  <section class="w-full py-24 px-8 md:px-16 bg-[#f8fafc] text-[#0b1326]" id="values-in-action">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16 text-center">
+        <h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Values in Action</h2>
+        <p class="text-xs font-bold tracking-[0.3em] uppercase text-slate-500">The Foundation</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div class="flex flex-col gap-4 border-t-2 border-[#34d399] pt-6 group">
+          <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400 group-hover:text-[#34d399] transition-colors">Strategic</h3>
+          <p class="text-base leading-relaxed text-slate-700 font-light italic">"Mitigating future risks by building documentation today to prevent a crisis tomorrow."</p>
+        </div>
+        <div class="flex flex-col gap-4 border-t-2 border-[#34d399] pt-6 group">
+          <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400 group-hover:text-[#34d399] transition-colors">Innovation</h3>
+          <p class="text-base leading-relaxed text-slate-700 font-light italic">"Auditing my own processes quarterly to find a more efficient path than the status quo."</p>
+        </div>
+        <div class="flex flex-col gap-4 border-t-2 border-[#34d399] pt-6 group">
+          <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400 group-hover:text-[#34d399] transition-colors">Creativity</h3>
+          <p class="text-base leading-relaxed text-slate-700 font-light italic">"Using narrative structures to make complex data reports engaging for stakeholders."</p>
+        </div>
+        <div class="flex flex-col gap-4 border-t-2 border-[#34d399] pt-6 group">
+          <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400 group-hover:text-[#34d399] transition-colors">Kindness</h3>
+          <p class="text-base leading-relaxed text-slate-700 font-light italic">"Mentorship as a KPI—measuring success by how many team members are ready for leadership roles."</p>
+        </div>
+        <div class="flex flex-col gap-4 border-t-2 border-[#34d399] pt-6 group">
+          <h3 class="font-bold text-xs uppercase tracking-widest text-slate-400 group-hover:text-[#34d399] transition-colors">Courage</h3>
+          <p class="text-base leading-relaxed text-slate-700 font-light italic">"Trading a high-level career to rebuild from zero in a new country, choosing growth over comfort."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="w-full py-12 md:py-16 px-8 md:px-12 flex flex-col md:flex-row justify-between items-center bg-[#0b1326] border-t border-outline-variant/10 relative z-10">
+    <div class="space-y-2 text-center md:text-left mb-8 md:mb-0">
+      <p class="font-serif italic Newsreader text-lg text-[#bbcac0]">© 2024 Aleksei Mora.</p>
+      <p class="text-[0.6875rem] uppercase tracking-widest text-outline-variant">Built with Cerebral Duality.</p>
+    </div>
+    <div class="flex flex-row gap-8 md:gap-12">
+      <a class="font-serif italic Newsreader text-base text-[#bbcac0] hover:text-[#5af0b3] transition-all opacity-80 hover:opacity-100" href="#systems-architect">The Strategist</a>
+      <a class="font-serif italic Newsreader text-base text-[#bbcac0] hover:text-[#5af0b3] transition-all opacity-80 hover:opacity-100" href="#narrative-archive">The Writer</a>
+      <a class="font-serif italic Newsreader text-base text-[#5af0b3] underline underline-offset-8 opacity-80 hover:opacity-100" href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

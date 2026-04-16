@@ -1,0 +1,113 @@
+/* ═══════════════════════════════════════════════════════════════
+   style.css — Aleksei Mora Portfolio
+   GitHub Pages compatible. All custom styles live here.
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Smooth scrolling ──────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Carousel track ─────────────────────────────────────────── */
+.carousel-track {
+  display: flex;
+  width: max-content;
+}
+
+/* ── 3-D Book Flip ──────────────────────────────────────────── */
+.book-container {
+  perspective: 1000px;
+}
+
+.book {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Hover flip (desktop) */
+.book:hover {
+  transform: rotateY(-180deg);
+}
+
+/* Click/tap toggle flip (JS adds this class) */
+.book.is-flipped {
+  transform: rotateY(-180deg);
+}
+
+.book-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.book-back {
+  transform: rotateY(180deg);
+}
+
+/* Back-cover image + overlay layout */
+.book-back {
+  position: relative;
+  overflow: hidden;
+}
+
+.book-back-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25; /* subtle background — increase if you want it more prominent */
+}
+
+.book-back-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ── Independent scrolling columns (desktop) ────────────────── */
+@media (min-width: 768px) {
+  .independent-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .independent-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .independent-scroll::-webkit-scrollbar-thumb {
+    background: rgba(90, 240, 179, 0.2);
+    border-radius: 2px;
+  }
+  .independent-scroll:hover::-webkit-scrollbar-thumb {
+    background: rgba(90, 240, 179, 0.4);
+  }
+}
+
+/* ── Mobile menu overlay ────────────────────────────────────── */
+.mobile-menu {
+  /* Hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Glow hover util ────────────────────────────────────────── */
+.glow-on-hover:hover {
+  text-shadow: 0 0 8px rgba(90, 240, 179, 0.6);
+}
