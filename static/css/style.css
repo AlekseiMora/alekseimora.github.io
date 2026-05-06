@@ -77,7 +77,7 @@ html {
   text-align: center;
 }
 
-/* ── Independent scrolling columns (desktop) ────────────────── */
+/* ── Independent scrolling columns (desktop) ────────────────── 
 @media (min-width: 768px) {
   .independent-scroll::-webkit-scrollbar {
     width: 4px;
@@ -93,7 +93,7 @@ html {
     background: rgba(90, 240, 179, 0.4);
   }
 }
-
+*/
 /* ── Mobile menu overlay ────────────────────────────────────── */
 .mobile-menu {
   /* Hidden by default */
