@@ -96,15 +96,28 @@ html {
 */
 /* ── Mobile menu overlay ────────────────────────────────────── */
 .mobile-menu {
-  /* Hidden by default */
+  position: fixed; /* Fixed so it covers the whole screen */
+  inset: 0;        /* Shorthand for top:0, left:0, right:0, bottom:0 */
+  z-index: 9999;   /* High z-index to stay on top of everything */
+  background-color: white; /* Or your specific brand background color */
+  
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Animation */
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease;
+  visibility: hidden; /* Added for extra safety */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .mobile-menu.is-open {
   opacity: 1;
   pointer-events: all;
+  visibility: visible;
 }
 
 /* ── Glow hover util ────────────────────────────────────────── */
