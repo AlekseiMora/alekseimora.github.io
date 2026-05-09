@@ -98,7 +98,7 @@ html {
 .mobile-menu {
   position: fixed; /* Fixed so it covers the whole screen */
   inset: 0;        /* Shorthand for top:0, left:0, right:0, bottom:0 */
-  z-index: 9999;   /* High z-index to stay on top of everything */
+  z-index: 99999;   /* High z-index to stay on top of everything */
   background-color: white; /* Or your specific brand background color */
   
   /* Layout */
